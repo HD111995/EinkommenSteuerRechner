@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EinkommensteuerRechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Einkommensteuer-Rechner</legend>
+        <form action="" onsubmit="return false">
+            <label for="">Einkommen:</label>
+            <div>
+            <input type="number" name="" id="ein" required>
+            <label for="">€</label>
+            </div>
+            <!-- ******************************* -->
+            <label for="" class="ein2" id="ein-2">Einkommen-2:</label>
+            <div class="ein2" id="ein.2">
+            <input type="number" name="" id="ein2">
+            <label for="">€</label>
+            </div>
+            <!-- ******************************* -->
+            <label for="">Person:</label>
+            <div>
+                <input type="radio" name="person" id="per"  onclick="no()">
+                <label for="">Eines</label>
+                <input type="radio" name="person" id="per2" onchange="change()">
+                <label for="">Zwei</label>
+            </div>
+            <!-- ******************************** -->
+            <label for="">Jahr</label>
+            <select name="" id="jahr">
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+            </select>
+            <!-- ************************* -->
+            <input type="submit" value="BERECHNEN" onclick="calc()">
+        </form>
+        <div id="result">
+            <h4>Einkommensteuer:</h4>
+            <h3 id="ein-st"></h3>
+            <h4>Bleibt:</h4>
+            <h3 id="rest"></h3>
+        </div>
+    </fieldset>
+<script src="assets/js/main.js"></script>    
+</body>
+</html>
